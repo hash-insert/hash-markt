@@ -1,0 +1,31 @@
+.container{
+    width: 200px;
+    margin: 10px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(165, 177, 140)
+    
+}
+
+.heart{
+ width: 30px;
+    height: 30px;
+}
+.heart:hover{
+background-color: red;
+
+}
+
+.rating{
+    
+    width: 85px;
+    height: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+.rating:hover{
+    background-color: yellow;
+}
