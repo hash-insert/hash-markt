@@ -1,7 +1,7 @@
 .container{
-    width: 200px;
+    width: 250px;
     margin: 10px;
-    height: 350px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,3 +29,12 @@ background-color: red;
 .rating:hover{
     background-color: yellow;
 }
+
+.card-container{
+    list-style: none;
+  }
+
+  .img-box{
+    width: 150px;
+    height: 150px;
+  }

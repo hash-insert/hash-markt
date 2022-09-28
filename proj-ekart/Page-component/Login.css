@@ -1,0 +1,28 @@
+.input-style{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+   margin: 100px;
+    padding: 5px;
+    background-color: rgba(167, 241, 176, 0.396);
+    border-style: dotted red;
+}
+input{
+width: 300px;
+height: 30px;
+margin: 5px;
+border-radius: 10px;
+}
+
+.loginBtn{
+    background-color: rgb(241, 241, 137);
+    margin: 10px;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+}
+.loginBtn:hover{
+    background-color: darkgoldenrod;
+}
