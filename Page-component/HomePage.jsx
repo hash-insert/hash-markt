@@ -28,18 +28,15 @@ useEffect(() => {
   return (
     <div>
       <Header />
-      
+      <div  className="card-container">
       {products.map((prod) => {
         return (
-          <div >
-        <ul  className="card-container">
-          <li key={prod.id}>
-            <Card img={prod.image} num={prod.rating.count} name={prod.title} desc={prod.descrption} cost={prod.price} />
-            
-          </li>
-        </ul>
-        </div>);
+        
+            <Card key={prod.id} img={prod.image} num={prod.rating.count} name={prod.title} desc={prod.descrption} cost={prod.price} />
+          );
       })}
+      </div>
+      
     </div>
   );
 }

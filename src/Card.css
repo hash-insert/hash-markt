@@ -1,18 +1,22 @@
 .container{
-    width: 250px;
-    margin: 10px;
+    width: 300px;
+    margin: 5px;
     height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(165, 177, 140)
+    background-color: rgb(165, 177, 140);
+    border-radius: 20px;
     
 }
 
 .heart{
  width: 30px;
     height: 30px;
+    align-self: flex-end;
+    margin-right: 5px;
+
 }
 .heart:hover{
 background-color: red;
@@ -31,10 +35,23 @@ background-color: red;
 }
 
 .card-container{
-    list-style: none;
-  }
+   
+    display: flex;
+    flex-wrap: wrap;
+    margin: 45px;
+   
 
-  .img-box{
-    width: 150px;
-    height: 150px;
+    
+   
+    
   }
+.card{
+    display: inline;
+}
+  .img-box{
+    width: 200px;
+    height: 220px;
+  }
+  /* .img-box:hover{
+
+  } */
