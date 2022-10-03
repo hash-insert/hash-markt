@@ -1,0 +1,14 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    /* background-color: rgb(108, 108, 235); */
+}
+.pages{
+
+    display: flex;
+list-style: none;
+    justify-content: space-between;
+    margin: 5px;
+    padding: 5px;
+}

@@ -1,0 +1,59 @@
+.container{
+    width: 250px;
+    margin: 10px;
+    width: 300px;
+    margin: 5px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(56, 56, 90);
+    border: solid 2px yellow;
+    color: yellow;
+
+
+
+}
+
+.heart{
+ width: 30px;
+height: 30px;
+align-self: flex-end;
+margin-right: 5px;
+
+}
+.heart:hover{
+background-color: red;
+
+}
+img{
+    width: 150px;
+    
+}
+
+.rating{
+
+    width: 85px;
+    height: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+.rating:hover{
+    background-color: yellow;
+}
+
+.cardcon{
+   
+    display: flex;
+    flex-wrap: wrap;
+    margin: 45px;
+   
+
+    
+   
+    
+  }
+.card{
+    display: inline;
+}
