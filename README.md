@@ -93,8 +93,8 @@ You can list the products by clicking on the categories, add and remove the prod
 ## Roadmap
 
 - [x] High-level structure of the Application
-- [ ] Building Pages and Components
-- [ ] Fetching product data, listing by categories and product detail page.
+- [x] Building Pages and Components
+- [x] Fetching product data, listing by categories and product detail page.
 - [ ] Add to favorites and favorites page.
 - [ ] Add to cart and cart page.
 - [ ] Responsive Design
