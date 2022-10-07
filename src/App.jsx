@@ -18,7 +18,7 @@ return(
   <Route path='/signUp'><SignUp /></Route>
   <Route path='/Cart'><Cart/></Route>
   <Route path='/Favourites'><Favourites /></Route>
-  <Route path='/Productdetails'><Productdetails /></Route>
+  <Route path='/Productdetails/:prod'><Productdetails /></Route>
 
   </BrowserRouter>
 
