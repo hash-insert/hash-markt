@@ -1,0 +1,31 @@
+.Header{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    background-color: blueviolet;
+    color: orange;
+    width: 100%;
+}
+.components{
+    list-style: none;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+     display: inline;
+     font-size: 20px;
+}
+
+h1 {
+    display: flex; 
+    font-size: 50px;
+    margin: auto;
+    padding: 2px;
+}
+
+.navbar {
+    display: inline;
+}
+
