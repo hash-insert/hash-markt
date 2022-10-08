@@ -1,7 +1,7 @@
-import Header from "../src/Header";
-import Button from "../src/Button";
+import Header from "../components/Header";
+import Button from "../components/Button";
 
-export default function Cart() {
+export default function Cart(props) {
   const cartstyle = {
     display: "flex",
     flexdirection: "column",

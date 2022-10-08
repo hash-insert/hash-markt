@@ -1,4 +1,4 @@
-import Header from "../src/Header";
+import Header from "../components/Header";
 
 
 

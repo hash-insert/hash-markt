@@ -1,5 +1,5 @@
-import Button from "../src/Button";
-import Header from "../src/Header";
+import Button from "../components/Button";
+import Header from "../components/Header";
 import './SignUp.css'
 
 export default function SignUp(){
