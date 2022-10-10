@@ -16,7 +16,12 @@ export default function Productdetails (props){
     return (
         <div>
             <h1>Product details</h1>
-            <div> <img src={productDetail.image }></img></div>
+            <div> <img src={productDetail.image }></img>
+            ({productDetail.title})
+            <p>{productDetail.description}</p>
+      <span>RS.{productDetail.price}</span>
+
+            </div>
         </div>
     )
 }   

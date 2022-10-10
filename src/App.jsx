@@ -16,7 +16,7 @@ function App() {
         <Route path="/" exact><Home /></Route>
         <Route path='/login'><Login /></Route>
         <Route path='/signUp'><SignUp /></Route>
-        <Route path='/Cart'><Cart /></Route>
+        <Route path='/Cart /:prod'><Cart /></Route>
         <Route path='/Favourites'><Favourites /></Route>
         <Route path='/Productdetails/:prod'><Productdetails /></Route>
       </BrowserRouter>
