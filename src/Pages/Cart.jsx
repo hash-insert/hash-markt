@@ -1,7 +1,15 @@
 import Header from "../components/Header";
 import Button from "../components/Button";
+import cartContext from "../context/cart-context";
+
+
+
 
 export default function Cart(props) {
+
+
+
+
   const cartstyle = {
     display: "flex",
     flexdirection: "column",

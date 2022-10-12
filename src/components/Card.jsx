@@ -43,7 +43,9 @@ export default function Card(props) {
       <span>{props.cost}$</span>
       <Button
         name="Add To Cart"
-        handleBtn={props.increment}
+        handleBtn={()=>{
+        props.addTocart(props.prod)
+        }}
       />
 
     </div>
