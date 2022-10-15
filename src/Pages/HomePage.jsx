@@ -35,6 +35,7 @@ export default function Home(props) {
   return (
     <div>
       <Header />
+      <hr />
       <div className="card-container">
         {products.map((prod) => {
           return (

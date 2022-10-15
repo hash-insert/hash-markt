@@ -15,7 +15,7 @@ export default function Cart(props) {
     display: "flex",
     flexdirection: "column",
     justifyContent: "center",
-    alignItems: "center",
+    alignitems: "center",
   };
 
   return (

@@ -1,13 +1,21 @@
+*{
+background-color:  #263859;
+color: gold;
+
+}
+
+
 .container{
-    width: 300px;
-    margin: 5px;
+    width: 280px;
+    margin: 25px;
     height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(165, 177, 140);
-    border-radius: 20px;
+    background-color: #263859;
+    border-radius: 8px;
+    box-shadow: 0 0 5px gold;
     
 }
 
@@ -16,12 +24,10 @@
     height: 30px;
     align-self: flex-end;
     margin-right: 5px;
+  
 
 }
-.heart:hover{
-background-color: red;
 
-}
 
 .rating{
     
@@ -38,7 +44,7 @@ background-color: red;
    
     display: flex;
     flex-wrap: wrap;
-    margin: 45px;
+  
    
 
     
