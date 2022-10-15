@@ -15,7 +15,7 @@ color: gold;
     align-items: center;
     background-color: #263859;
     border-radius: 8px;
-    box-shadow: 0 0 5px gold;
+    box-shadow: 0 0 0px 2px yellow ;
     
 }
 
@@ -43,14 +43,21 @@ color: gold;
 .card-container{
    
     display: flex;
-    flex-wrap: wrap;
-  
-   
-
-    
-   
-    
+    flex-wrap: wrap; 
   }
+
+
+  .btn{
+width: 250px;
+height: 40px;
+border-radius: 10px;
+background-color: rgb(247, 247, 25);
+color: black;
+font-size: 15px;
+
+  }
+
+
 .card{
     display: inline;
 }
