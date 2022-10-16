@@ -1,9 +1,14 @@
 .signup-style{
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: 400px;
+    height: 400px;
+    margin: 50px;
+    margin-left: 500px;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 0 3px yellow;
+    padding: 2px;
 }
 .signup-btn{
     width: 310px;

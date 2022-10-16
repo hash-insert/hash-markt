@@ -20,13 +20,13 @@ color: gold;
 }
 
 .heart{
- width: 30px;
-    height: 30px;
+
     align-self: flex-end;
     margin-right: 5px;
-  
 
+  
 }
+
 
 
 .rating{
@@ -36,9 +36,9 @@ color: gold;
     display: flex;
     justify-content: flex-start;
 }
-.rating:hover{
+/* .rating:hover{
     background-color: yellow;
-}
+} */
 
 .card-container{
    
@@ -68,3 +68,33 @@ font-size: 15px;
   /* .img-box:hover{
 
   } */
+
+  .fav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   box-shadow: 0 0 0 3px yellow;
+   border-radius: 5px;
+    width: auto;
+    height: auto;
+    margin:50px;
+    background-color: white;
+   
+    
+   
+  }
+
+  .cartbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 3px yellow;
+    border-radius: 5px;
+     width: auto;
+     height: auto;
+     margin:50px;
+     background-color: white;
+   
+  }

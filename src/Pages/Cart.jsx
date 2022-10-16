@@ -21,9 +21,9 @@ export default function Cart(props) {
   return (
     <div>
       <Header />
-      <div style={{ cartstyle }}>
+      <div className="cartbox" style={{ cartstyle }}>
         <h1>CART</h1>
-     <ShoppingCartIcon />
+     <ShoppingCartIcon style={{width:"250px",height:"250px"}} />
         <p>There are no products in your cart.</p>
         <p>Add the products you like to the cart and buy.</p>
         <Button name="Continue Shopping" />

@@ -8,7 +8,7 @@ export default function Card(props) {
   return (
     <div className="container">
       <div className="heart">
-        <HeartIcon />
+        <HeartIcon style={{width:"25px",height:"25px"}} />
       </div>
 
       <img className="img-box" src={props.img} />
@@ -29,7 +29,7 @@ export default function Card(props) {
       <Button
         name="Add To Cart"
         className="btn"
-       
+      //  img= <ShoppingCartIcon  style={{width:"10px",height:"10px"}} />
 
         handleBtn={() => {
           props.addTocart(props.prod);

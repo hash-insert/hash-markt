@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <nav className="header">
       <Link to="/">
-        <h1>#markt</h1>
+        <h1 className="head">#markt</h1>
       </Link>
 
       <Link to="/login"><h3>Login</h3></Link>
@@ -23,8 +23,10 @@ export default function Header() {
       <h3>{store.count ? store.count : 0}</h3>
 
       <a href="/cart">
-       <ShoppingCartIcon />
+      <ShoppingCartIcon style={{width:"50px",height:"50px"}}/>
       </a>
+       
+      
     </nav>
   );
 }
