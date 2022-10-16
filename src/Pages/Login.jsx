@@ -6,6 +6,7 @@ export default function Login() {
   return (
     <div>
       <Header />
+      <hr />
       <div className="input-style">
         <h1>LOGIN</h1>
 

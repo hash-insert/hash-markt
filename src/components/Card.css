@@ -98,3 +98,13 @@ font-size: 15px;
      background-color: white;
    
   }
+
+  .tabs{
+    display: flex;
+    margin: 10px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    
+    
+  }

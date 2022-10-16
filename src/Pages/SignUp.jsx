@@ -7,6 +7,7 @@ export default function SignUp(){
 
 <div>
     <Header />
+    <hr />
     <div className="signup-style">
     <h1>SIGN UP</h1>
     <input type="name" placeholder="First Name" />

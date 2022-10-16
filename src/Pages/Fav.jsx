@@ -6,6 +6,7 @@ export default function Fav(props) {
   return (
     <div>
       <Header />
+      <hr />
       <div  className="fav">
       <h1>FAVOURITE</h1>
     <HeartIcon style={{width:"250px",height:"250px",color:"red"}}/>
