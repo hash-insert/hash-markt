@@ -108,3 +108,12 @@ font-size: 15px;
     
     
   }
+  .all{
+    margin: 10px;
+    width:150px;
+    height: 35px;
+    
+  }
+  .all:hover{
+    box-shadow:  3px 0px 3px  yellow;
+  }
