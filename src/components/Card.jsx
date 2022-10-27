@@ -8,7 +8,7 @@ export default function Card(props) {
   return (
     <div className="container">
       <div className="heart">
-        <HeartIcon style={{width:"25px",height:"25px"}} />
+        <HeartIcon  className="heartIcon" style={{width:"25px",height:"25px"}} />
       </div>
 
       <img className="img-box" src={props.img} />

@@ -23,7 +23,7 @@ export default function Header() {
       {/* <h3>{store.count ? store.count : 0}</h3> */}
 
       <a href="/cart">
-      <ShoppingCartIcon style={{width:"50px",height:"50px"}}/>
+      <ShoppingCartIcon style={{width:"50px",height:"50px",color:"gold"}}/>
       </a>
        
       

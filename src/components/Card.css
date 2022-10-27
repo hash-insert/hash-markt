@@ -1,6 +1,6 @@
-*{
+body{
 background-color:  #263859;
-color: gold;
+  color: gold; 
 
 }
 
@@ -116,4 +116,7 @@ font-size: 15px;
   }
   .all:hover{
     box-shadow:  3px 0px 3px  yellow;
+  }
+  .heartIcon :hover{
+    fill: red;
   }
