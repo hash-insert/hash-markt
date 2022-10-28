@@ -104,13 +104,13 @@ export default function Home(props) {
     setCategory(categories);
   }
 
-  let filterCard=[];
+  let filterCard=products;
   if (category) {
     filterCard = products.filter((items) => items.category === category);
   }
-  else {
-    filterCard =products
-}
+//   else {
+//     filterCard =products
+// }
 
 
 
