@@ -27,14 +27,14 @@ const App = () => {
 
   return (
     <div className="App">
-      <ProductContext.Provider value={{count,productsApp}}>
+      <ProductContext.Provider value={{count,incrementCount}}>
         <BrowserRouter>
           <Route path="/" exact><Home increment={incrementCount} handleProducts={setProductsApp} /></Route>
           <Route path='/login'><Login /></Route>
           <Route path='/signUp'><SignUp /></Route>
           <Route path='/cart'><Cart /></Route>
           <Route path='/fav'><Fav /></Route>
-          <Route path='/product/:prod'><Product /></Route>
+          <Route path='/product/:id'><Product /></Route>
         </BrowserRouter>
       </ProductContext.Provider>
     </div>

@@ -20,11 +20,11 @@ export default function Header() {
       <Link to="/cart"><h3>Cart</h3></Link>
       <Link to="/fav"><h3>Favrourite</h3></Link>
 
-      {/* <h3>{store.count ? store.count : 0}</h3> */}
+      <h3>{store.count ? store.count : 0}</h3>
 
-      <a href="/cart">
+      <Link to="/cart">
       <ShoppingCartIcon style={{width:"50px",height:"50px",color:"gold"}}/>
-      </a>
+      </Link>
        
       
     </nav>

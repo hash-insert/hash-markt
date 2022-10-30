@@ -3,8 +3,13 @@ import { StarIcon } from "@heroicons/react/24/outline";
 import "./Card.css";
 import Button from "./Button.jsx";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import ProductContext from "../context/product-context";
 
 export default function Card(props) {
+const countCtx=useContext(ProductContext)
+
+  console.log("here are card props",props)
   return (
     <div className="container">
       <div className="heart">
@@ -32,6 +37,8 @@ export default function Card(props) {
       //  img= <ShoppingCartIcon  style={{width:"10px",height:"10px"}} />
 
         handleBtn={() => {
+          countCtx.incrementCount()
+         
           props.addTocart(props.prod);
         }}
       />

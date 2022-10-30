@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 
 export default function Home(props) {
   const [products, setProducts] = useState([]);
+ 
   const [category,setCategory] = useState("")
 
 //   function handleElecBtn(){
@@ -142,6 +143,7 @@ export default function Home(props) {
 
             <Card
               key={prod.id}
+              id={prod.id}
               prod={prod}
               img={prod.image}
               num={prod.rating.count}
