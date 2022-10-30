@@ -10,4 +10,7 @@ h1,h3{
   color: gold;
 }
 
-
+h1{
+  padding: 10px;
+  font-weight: 800;
+}

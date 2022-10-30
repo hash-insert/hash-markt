@@ -20,9 +20,10 @@ export default function Header() {
       <Link to="/cart"><h3>Cart</h3></Link>
       <Link to="/fav"><h3>Favrourite</h3></Link>
 
-      <h3>{store.count ? store.count : 0}</h3>
+      
 
       <Link to="/cart">
+      <h3>{store.count ? store.count : 0}</h3>
       <ShoppingCartIcon style={{width:"50px",height:"50px",color:"gold"}}/>
       </Link>
        

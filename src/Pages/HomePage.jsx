@@ -16,52 +16,7 @@ export default function Home(props) {
  
   const [category,setCategory] = useState("")
 
-//   function handleElecBtn(){
-//     console.log('electronics')
-    
-//  let filterElec = products.filter((item)=> {
-//   if(item.category=== 'electronics'){
-//     console.log(item)
-//   }
- 
-//  })
-//  return filterElec
-// }
 
-// function handleJewBtn(){
-//   console.log('jewellary')
-  
-// let filterJew = products.filter((item)=> {
-// if(item.category=== "jewelery"){
-//   console.log(item)
-// }
-
-// })
-// return filterJew
-// }
-// function handleMensBtn(){
-//   console.log('mens cloth')
-  
-// let filterMens = products.filter((item)=> {
-// if(item.category=== "men's clothing"){
-//   console.log(item)
-// }
-
-// })
-// return filterMens
-// }
-// function handleWomensBtn(){
-//   console.log('womens cloth')
-  
-// let filterWomens = products.filter((item)=> {
-// if(item.category=== "women's clothing"){
-//   console.log(item)
- 
-// }
-
-// })
-//   
-// }
 
   
 
@@ -109,14 +64,6 @@ export default function Home(props) {
   if (category) {
     filterCard = products.filter((items) => items.category === category);
   }
-//   else {
-//     filterCard =products
-// }
-
-
-
-  // Filtering Data
-  // useEffect - depending click event of your handler tabs - fetch filtered products
 
 
 

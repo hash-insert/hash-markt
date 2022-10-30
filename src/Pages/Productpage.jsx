@@ -30,7 +30,7 @@ export default function Product (props){
       }, []);
 
 let unique = useParams()
-console.log("hello",unique)
+
 
     return (
         <div>
