@@ -9,21 +9,18 @@ import FavContext from "../context/favorite-context";
 
 export default function Card(props) {
   const countCtx = useContext(ProductContext);
-const fav= useContext(FavContext)
-  
+  const fav = useContext(FavContext);
+
   return (
     <div className="container">
       <div className="heart">
         <HeartIcon
           className="heartIcon"
-          style={{ width: "25px", height: "25px" ,color:"grey",fill:"grey"}}
-          onClick={()=>{
-            
-            fav.addToFav(props.prod)
-            
-           
-        
-        }}
+          style={{ width: "25px", height: "25px", color: "grey", fill: "grey" }}
+          onClick={(e) => {
+            fav.addToFav(props.prod);
+            e.target.style.fill="red"
+          }}
         />
       </div>
 
@@ -47,9 +44,11 @@ const fav= useContext(FavContext)
         className="btn"
         //  img= <ShoppingCartIcon  style={{width:"10px",height:"10px"}} />
 
-        handleBtn={() => {
+        handleBtn={(e) => {
           countCtx.incrementCount();
-
+         
+          e.target.style.backgroundColor = "red"
+          console.log(e.target);
           props.addTocart(props.prod);
         }}
       />
