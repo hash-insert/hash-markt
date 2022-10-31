@@ -8,9 +8,6 @@ import Button from "../components/Button";
 import { Link } from "react-router-dom";
 
 
-
-
-
 export default function Home(props) {
   const [products, setProducts] = useState([]);
 
@@ -26,7 +23,7 @@ export default function Home(props) {
       .then((data) => {
         // console.log(data);
         setProducts(data);
-        props.handleProducts(data);
+        // props.handleProducts(data);
       });
   };
 
@@ -42,9 +39,7 @@ export default function Home(props) {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-
         setCategory(data);
-
       });
   };
   useEffect(() => {
@@ -56,20 +51,19 @@ export default function Home(props) {
     setCategory(categories);
   }
 
-  let filterCard = products;
-  if (category) {
+  let filterCard = [];
+  if (category != "") {
     filterCard = products.filter((items) => items.category === category);
   }
-
-
-
+  else {
+    filterCard = products;
+  }
 
   return (
     <div>
       <Header />
       <hr />
       <div className="tabs">
-
         <Button className="all" name="All" handleBtn={() => filterprod("")} />
         <Button className="all" name="Electronics" handleBtn={() => filterprod("electronics")} />
         <Button className="all" name="Jewellary" handleBtn={() => filterprod("jewelery")} />
@@ -78,11 +72,8 @@ export default function Home(props) {
       </div>
 
       <div className="card-container">
-
-
         {filterCard.map((prod) => {
           return (
-
             <Card
               key={prod.id}
               id={prod.id}
