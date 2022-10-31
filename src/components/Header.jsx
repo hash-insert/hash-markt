@@ -8,7 +8,7 @@ export default function Header() {
 
   const store = useContext(ProductContext);
 
-  console.log("store context ",store)
+  
   return (
     <nav className="header">
       <Link to="/">

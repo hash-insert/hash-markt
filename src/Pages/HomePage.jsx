@@ -13,39 +13,15 @@ export default function Home(props) {
 
   const { items, setItems, addTocart } = useContext(CartContext);
 
-  // Get Categories
-  // useEffect - fetch categories
-  // const fetchCategories = () => {
-
-  //   let url = 'https://fakestoreapi.com/products/categories';
-  //   fetch(url)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setCategory(data);
-  //     });
-  // };
-
-  // useEffect(() => {
-  //   fetchCategories();
-  // }, []);
-
-
   const fetchData = () => {
     // fetching data from url
     let url = "https://fakestoreapi.com/products";
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
+        
         setProducts(data);
 
-        // if (category != "") {
-        //   filterCard = data.filter((items) => items.category === category);
-        // }
-        // else {
-        //   filterCard = data;
-        // }
-        // props.handleProducts(data);
       });
   };
 
