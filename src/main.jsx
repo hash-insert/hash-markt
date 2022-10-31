@@ -8,11 +8,11 @@ import './index.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
 
   <React.StrictMode>
-<FavProvider>
-    <CartProvider>
-    <App />
-    </CartProvider>
+    <FavProvider>
+      <CartProvider>
+        <App />
+      </CartProvider>
     </FavProvider>
-   
+
   </React.StrictMode>
 )

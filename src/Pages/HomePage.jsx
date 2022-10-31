@@ -5,8 +5,6 @@ import "../components/Card.css";
 import ProductContext from "../context/product-context";
 import CartContext from "../context/cart-context";
 import Button from "../components/Button";
-import { Link } from "react-router-dom";
-
 
 export default function Home(props) {
   const [products, setProducts] = useState([]);
@@ -17,19 +15,19 @@ export default function Home(props) {
 
   // Get Categories
   // useEffect - fetch categories
-  const fetchCategories = () => {
+  // const fetchCategories = () => {
 
-    let url = 'https://fakestoreapi.com/products/categories';
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        setCategory(data);
-      });
-  };
+  //   let url = 'https://fakestoreapi.com/products/categories';
+  //   fetch(url)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setCategory(data);
+  //     });
+  // };
 
-  useEffect(() => {
-    fetchCategories();
-  }, []);
+  // useEffect(() => {
+  //   fetchCategories();
+  // }, []);
 
 
   const fetchData = () => {
@@ -70,9 +68,6 @@ export default function Home(props) {
   else {
     filterCard = products;
   }
-
-  console.log("filtered card ", filterCard);
-  console.log("filtered items ", products);
 
   return (
     <div>
