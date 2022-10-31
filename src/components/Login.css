@@ -1,0 +1,33 @@
+.input-style{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+   margin: 100px;
+    padding: 5px;
+    background-color:  rgb(69, 69, 94);
+    border: 2px solid yellow;
+}
+input{
+width: 300px;
+height: 30px;
+margin: 5px;
+border-radius: 5px;
+border:2px solid yellow ;
+}
+
+.loginbtn{
+    background-color:yellow;
+    margin: 10px;
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid  rgb(56, 56, 90) ;
+    color:  rgb(56, 56, 90);
+}
+.loginbtn:hover{
+    background-color:rgb(69, 69, 94);
+    color: yellow;
+    border: 2px solid yellow;
+}

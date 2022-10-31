@@ -9,9 +9,9 @@ button:hover{
 .cardcon{
     align-content: center;
     align-items: center;
-    padding-left: 100px;
+    padding-left: 50px;
 
 }
 .filterbtn{
-    padding-right: 50px;
+    /* padding-right: 10px; */
 }

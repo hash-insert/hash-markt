@@ -1,11 +1,14 @@
 import { useContext } from 'react';
 import { useParams } from 'react-router-dom'
+import { HeartIcon, ShoppingCartIcon,StarIcon } from "@heroicons/react/24/outline";
+
 
 import ProductContext from '../context/product-context';
+import './Productdetails.css';
 import Header from '../Header'
 
-export default function Productdetails (props){
-    const {productList} = useContext(ProductContext);
+export default function Productdetails(props) {
+    const { productList } = useContext(ProductContext);
 
     const prod_id = useParams();
     console.log("product id ", prod_id)
@@ -14,12 +17,17 @@ export default function Productdetails (props){
     console.log(productDetail);
 
     return (
-        <div>
+        <div className='productpage'>
             <h1>Product details</h1>
-            <div> <img src={productDetail.image }></img>
-            ({productDetail.title})
-            <p>{productDetail.description}</p>
-      <span>RS.{productDetail.price}</span>
+            <div className='product'>
+                <img src={productDetail.image} className='pimg'></img>
+                <div className='productdetails'>
+                    <h2>({productDetail.title})</h2>
+                    <p>{productDetail.description}</p>
+                    <span>$.{productDetail.price}</span>
+                    <button className='addtocart'>add to cart < ShoppingCartIcon className='cart' /></button>
+
+                </div>
 
             </div>
         </div>

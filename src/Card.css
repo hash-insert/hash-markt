@@ -1,7 +1,6 @@
 .container{
-    width: 250px;
     margin: 10px;
-    width: 300px;
+    width: 250px;
     margin: 5px;
     height: 450px;
     display: flex;
@@ -27,17 +26,21 @@ margin-right: 5px;
 background-color: red;
 
 }
-img{
-    width: 150px;
+.container img{
+    width:150px;
+    height: 200px;
     
 }
 
-.rating{
+.ratingstar{
 
-    width: 85px;
-    height: 20px;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row;
+}
+.rating{
+    width: 20px;
+    height: 20px;
+    padding: 2px;
 }
 .rating:hover{
     background-color: yellow;
@@ -48,12 +51,14 @@ img{
     display: flex;
     flex-wrap: wrap;
     margin: 45px;
-   
-
-    
-   
-    
-  }
-.card{
-    display: inline;
 }
+   
+.name{
+font-size: medium;
+color: rgb(240, 240, 48);
+margin: 15px;
+}
+    
+/* .card{
+    display: inline;
+} */
