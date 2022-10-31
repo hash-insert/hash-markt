@@ -16,6 +16,7 @@ export default function Home(props) {
   const { items, setItems, addTocart } = useContext(CartContext);
 
   let filterCard = [];
+  let filteredProducts = [];
 
   const fetchData = () => {
     // fetching data from url
@@ -26,13 +27,11 @@ export default function Home(props) {
         // console.log(data);
         setProducts(data);
 
-        if (data.length != 0) {
-          if (category != "") {
-            filterCard = data.filter((items) => items.category === category);
-          }
-          else {
-            filterCard = data;
-          }
+        if (category != "") {
+          filterCard = data.filter((items) => items.category === category);
+        }
+        else {
+          filterCard = data;
         }
         // props.handleProducts(data);
       });
@@ -54,6 +53,7 @@ export default function Home(props) {
         setCategory(data);
       });
   };
+
   useEffect(() => {
     fetchCategories();
   }, []);
@@ -71,6 +71,7 @@ export default function Home(props) {
 
 
   console.log("filtered items ", filterCard);
+  console.log("filtered items ", products);
 
   return (
     <div>
