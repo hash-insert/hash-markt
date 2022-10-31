@@ -62,10 +62,10 @@ export default function Home(props) {
     console.log("categories ", categories)
     setCategory(categories);
     if (category != "") {
-      filterCard = data.filter((items) => items.category === category);
+      filterCard = products.filter((items) => items.category === category);
     }
     else {
-      filterCard = data;
+      filterCard = products;
     }
   }
 
