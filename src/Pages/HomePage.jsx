@@ -70,7 +70,7 @@ export default function Home(props) {
     filterCard = products;
   }
 
-  console.log("filtered items ", filterCard);
+  console.log("filtered card ", filterCard);
   console.log("filtered items ", products);
 
   return (
