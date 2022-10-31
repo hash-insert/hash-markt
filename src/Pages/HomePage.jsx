@@ -15,6 +15,8 @@ export default function Home(props) {
 
   const { items, setItems, addTocart } = useContext(CartContext);
 
+  const filterCard = [];
+
   const fetchData = () => {
     // fetching data from url
     let url = "https://fakestoreapi.com/products";
@@ -23,13 +25,22 @@ export default function Home(props) {
       .then((data) => {
         // console.log(data);
         setProducts(data);
+
+        if (data.length != 0) {
+          if (category != "") {
+            filterCard = data.filter((items) => items.category === category);
+          }
+          else {
+            filterCard = data;
+          }
+        }
         // props.handleProducts(data);
       });
   };
 
+
   useEffect(() => {
     fetchData();
-    filterProducts();
   }, []);
 
   // Get Categories
@@ -50,20 +61,16 @@ export default function Home(props) {
   const filterprod = (categories) => {
     console.log("categories ", categories)
     setCategory(categories);
-  }
-
-  let filterCard = [];
-  const filterProducts = () => {
-    if (products.length != 0) {
-      if (category != "") {
-        filterCard = products.filter((items) => items.category === category);
-      }
-      else {
-        filterCard = products;
-      }
+    if (category != "") {
+      filterCard = data.filter((items) => items.category === category);
+    }
+    else {
+      filterCard = data;
     }
   }
 
+
+  console.log("filtered items ", filterCard);
 
   return (
     <div>
