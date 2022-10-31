@@ -15,9 +15,6 @@ export default function Home(props) {
 
   const { items, setItems, addTocart } = useContext(CartContext);
 
-  let filterCard = [];
-  let filteredProducts = [];
-
   // Get Categories
   // useEffect - fetch categories
   const fetchCategories = () => {
@@ -57,7 +54,6 @@ export default function Home(props) {
 
   useEffect(() => {
     fetchData();
-    debugger;
   }, []);
 
 
@@ -66,7 +62,9 @@ export default function Home(props) {
     setCategory(categories);
   }
 
-  if (category != "") {
+  let filterCard = [];
+
+  if (category !== "") {
     filterCard = products.filter((items) => items.category === category);
   }
   else {
