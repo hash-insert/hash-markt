@@ -18,6 +18,23 @@ export default function Home(props) {
   let filterCard = [];
   let filteredProducts = [];
 
+  // Get Categories
+  // useEffect - fetch categories
+  const fetchCategories = () => {
+
+    let url = 'https://fakestoreapi.com/products/categories';
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        setCategory(data);
+      });
+  };
+
+  useEffect(() => {
+    fetchCategories();
+  }, []);
+
+
   const fetchData = () => {
     // fetching data from url
     let url = "https://fakestoreapi.com/products";
@@ -40,23 +57,9 @@ export default function Home(props) {
 
   useEffect(() => {
     fetchData();
+    debugger;
   }, []);
 
-  // Get Categories
-  // useEffect - fetch categories
-  const fetchCategories = () => {
-
-    let url = 'https://fakestoreapi.com/products/categories';
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        setCategory(data);
-      });
-  };
-
-  useEffect(() => {
-    fetchCategories();
-  }, []);
 
   const filterprod = (categories) => {
     console.log("categories ", categories)
