@@ -3,7 +3,7 @@ import Card from "../components/Card";
 import { useContext, useEffect, useState } from "react";
 import "../components/Card.css";
 import ProductContext from "../context/product-context";
-import cartContext from "../context/cart-context";
+import CartContext from "../context/cart-context";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
 
@@ -16,7 +16,7 @@ export default function Home(props) {
 
   const [category, setCategory] = useState("")
 
-  const { items, setItems, addTocart } = useContext(cartContext);
+  const { items, setItems, addTocart } = useContext(CartContext);
 
   const fetchData = () => {
     // fetching data from url

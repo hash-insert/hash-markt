@@ -1,12 +1,12 @@
 import Header from "../components/Header";
 import Button from "../components/Button";
-import cartContext from "../context/cart-context";
+import CartContext from "../context/cart-context";
 import { ShoppingCartIcon } from "@heroicons/react/24/outline";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 export default function Cart(props) {
-  const cart = useContext(cartContext);
+  const cart = useContext(CartContext);
 
   const cartstyle = {
     display: "flex",
@@ -23,11 +23,11 @@ export default function Cart(props) {
         cart.items.map((item) => {
           console.log(item);
           return (
-            <div  className="cart-boxstyle">
-              <img src={item.image} style={{ width: "150px",height:"150px",padding:"10px" }}></img>
+            <div className="cart-boxstyle">
+              <img src={item.image} style={{ width: "150px", height: "150px", padding: "10px" }}></img>
               <div className="cart-style">
-              <p>{item.title}</p>
-              <p>${item.price}</p>
+                <p>{item.title}</p>
+                <p>${item.price}</p>
               </div>
             </div>
           );
