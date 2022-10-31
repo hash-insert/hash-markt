@@ -3,13 +3,28 @@ import { StarIcon } from "@heroicons/react/24/outline";
 import "./Card.css";
 import Button from "./Button.jsx";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import ProductContext from "../context/product-context";
 import FavContext from "../context/favorite-context";
+import CartContext from "../context/cart-context";
 
 export default function Card(props) {
   const countCtx = useContext(ProductContext);
   const fav = useContext(FavContext);
+  const cartCtx = useContext(CartContext)
+  const [toggle, setToogle] = useState(false)
+
+  const handleCart = (e) => {
+    {
+      countCtx.incrementCount();
+      toggle ? CartContext.addTocart() : CartContext.removeFromCart();
+
+
+      toggle ? e.target.style.backgroundColor = "yellow" : e.target.style.backgroundColor = "red"
+      console.log(e.target);
+      // props.addTocart(props.prod);
+    }
+  }
 
   return (
     <div className="container">
@@ -19,7 +34,7 @@ export default function Card(props) {
           style={{ width: "25px", height: "25px", color: "grey", fill: "grey" }}
           onClick={(e) => {
             fav.addToFav(props.prod);
-            e.target.style.fill="red"
+            e.target.style.fill = "red"
           }}
         />
       </div>
@@ -44,13 +59,7 @@ export default function Card(props) {
         className="btn"
         //  img= <ShoppingCartIcon  style={{width:"10px",height:"10px"}} />
 
-        handleBtn={(e) => {
-          countCtx.incrementCount();
-         
-          e.target.style.backgroundColor = "red"
-          console.log(e.target);
-          props.addTocart(props.prod);
-        }}
+        handleBtn={(e) => handleCart(e)}
       />
     </div>
   );
