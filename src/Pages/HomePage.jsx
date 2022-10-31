@@ -15,7 +15,7 @@ export default function Home(props) {
 
   const { items, setItems, addTocart } = useContext(CartContext);
 
-  const filterCard = [];
+  let filterCard = [];
 
   const fetchData = () => {
     // fetching data from url
