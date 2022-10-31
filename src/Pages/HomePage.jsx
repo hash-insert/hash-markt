@@ -27,12 +27,12 @@ export default function Home(props) {
         // console.log(data);
         setProducts(data);
 
-        if (category != "") {
-          filterCard = data.filter((items) => items.category === category);
-        }
-        else {
-          filterCard = data;
-        }
+        // if (category != "") {
+        //   filterCard = data.filter((items) => items.category === category);
+        // }
+        // else {
+        //   filterCard = data;
+        // }
         // props.handleProducts(data);
       });
   };
@@ -61,14 +61,14 @@ export default function Home(props) {
   const filterprod = (categories) => {
     console.log("categories ", categories)
     setCategory(categories);
-    if (category != "") {
-      filterCard = products.filter((items) => items.category === category);
-    }
-    else {
-      filterCard = products;
-    }
   }
 
+  if (category != "") {
+    filterCard = products.filter((items) => items.category === category);
+  }
+  else {
+    filterCard = products;
+  }
 
   console.log("filtered items ", filterCard);
   console.log("filtered items ", products);
