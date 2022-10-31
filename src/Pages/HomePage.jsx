@@ -29,6 +29,7 @@ export default function Home(props) {
 
   useEffect(() => {
     fetchData();
+    filterProducts();
   }, []);
 
   // Get Categories
@@ -52,12 +53,17 @@ export default function Home(props) {
   }
 
   let filterCard = [];
-  if (category != "") {
-    filterCard = products.filter((items) => items.category === category);
+  const filterProducts = () => {
+    if (products.length != 0) {
+      if (category != "") {
+        filterCard = products.filter((items) => items.category === category);
+      }
+      else {
+        filterCard = products;
+      }
+    }
   }
-  else {
-    filterCard = products;
-  }
+
 
   return (
     <div>
