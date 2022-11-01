@@ -11,35 +11,36 @@ import CartContext from "../context/cart-context";
 export default function Card(props) {
   const countCtx = useContext(ProductContext);
   const fav = useContext(FavContext);
-  const cartCtx = useContext(CartContext)
-  const [toggle, setToggle] = useState(false)
-  
+  const cartCtx = useContext(CartContext);
+  const [toggle, setToggle] = useState(false);
 
   const handleCart = (e) => {
     {
       countCtx.incrementCount();
-      toggle ? cartCtx.addTocart(props.prod):cartCtx.removeFromCart(props.prod)
+      toggle ? cartCtx.addTocart(props.prod)  :cartCtx.removeFromCart(props.prod)
+      toggle
+        ? (e.target.style.backgroundColor = "yellow")
+        : (e.target.style.backgroundColor = "red");
+      setToggle((toggle) => !toggle);
     
-        // cartCtx.removeFromCart();
-
-
-      // toggle? e.target.style.backgroundColor = "yellow" :setToggle(e.target.style.backgroundColor = "red" === true)
-        // e.target.style.backgroundColor = "red"
-      console.log(e.target);
-      // props.addTocart(props.prod);
     }
-  }
+  };
 
   return (
     <div className="container">
       <div className="heart">
         <HeartIcon
           className="heartIcon"
-          style={{ width: "25px", height: "25px", color: "grey", fill: "grey" }}
+          
           onClick={(e) => {
             fav.addToFav(props.prod);
-            e.target.style.fill = "red"
+            toggle
+              ? (e.target.style.fill = "grey")
+              : (e.target.style.fill= "red");
+            setToggle((toggle) => !toggle);
+            console.log(toggle)
           }}
+        
         />
       </div>
 
@@ -63,7 +64,7 @@ export default function Card(props) {
         className="btn"
         //  img= <ShoppingCartIcon  style={{width:"10px",height:"10px"}} />
 
-        handleBtn={(e) => handleCart(e,setToggle(true))}
+        handleBtn={(e) => handleCart(e)}
       />
     </div>
   );

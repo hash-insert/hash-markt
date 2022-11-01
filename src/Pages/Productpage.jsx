@@ -6,6 +6,7 @@ import Button from "../components/Button";
 import { HeartIcon, ShoppingCartIcon } from "@heroicons/react/24/outline";
 
 export default function Product(props) {
+  const [toggle, setToggle] = useState(false);
   const [singleProd, setSingleProd] = useState([]);
   const fetchUniqueProd = () => {
     // fetching data from url
@@ -28,11 +29,19 @@ export default function Product(props) {
 
   let unique = useParams();
 
+   function handleBtn(e){
+toggle ? e.target.style.backgroundColor="yellow" :e.target.style.backgroundColor="red"
+setToggle(toggle => !toggle)
+
+console.log(toggle)
+
+  }
+
   return (
     <div>
       <Header />
       <hr />
-      <h1>Product page</h1>
+      
       <div className="pbox">
         <img src={singleProd.image} style={{ width: "300px" }} alt="" />
         <div className="pbox2">
@@ -43,7 +52,7 @@ export default function Product(props) {
             <StarIcon />
             <StarIcon />
             <StarIcon />
-            <StarIcon />({singleProd.num})
+            <StarIcon />
           </div>
           <p> {singleProd.description}</p>
           <div className="pbox3">
@@ -51,17 +60,13 @@ export default function Product(props) {
             <Button
               name="Add To Cart"
               className="btn"
+              onClick={handleBtn(e)}
               //  img= <ShoppingCartIcon  style={{width:"10px",height:"10px"}} />
             />
             <div className="heart">
               <HeartIcon
                 className="heartIcon"
-                style={{
-                  width: "25px",
-                  height: "25px",
-                  color: "grey",
-                  fill: "grey",
-                }}
+
                 onClick={(e) => {
                   fav.addToFav(props.prod);
                   e.target.style.fill = "red";

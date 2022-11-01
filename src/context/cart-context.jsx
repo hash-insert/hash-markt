@@ -13,7 +13,7 @@ const CartProvider = (props) => {
 
     const removeFromCart = (prod) => {
         // remove from the cart items list
-        setItems((items)=> [items.pop(prod),...items])
+        setItems((items)=> [items.splice(0,prod)])
         
         console.log("remove from cart")
     }

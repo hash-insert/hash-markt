@@ -65,8 +65,8 @@ body {
   align-items: center;
   box-shadow: 0 0 0 3px yellow;
   border-radius: 5px;
-  width: auto;
-  height: auto;
+  /* width: auto;
+  height: auto; */
   margin: 50px;
   background-color: white;
 }
@@ -100,14 +100,24 @@ body {
   box-shadow: 3px 0px 3px yellow;
 }
 
+.heartIcon{
+  width: 25px;
+  height: 25px;
+  color: grey;
+  fill: grey
+}
+
 .heartIcon :hover {
   fill: red;
 }
 
 .favCards {
+  width: auto;
+  height: auto;
   display: flex;
-  
+
   flex-wrap: wrap;
+ 
 }
 
 .cart-boxstyle{
@@ -133,10 +143,15 @@ padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content:space-evenly;
+  margin: 20px;
+  padding: 20px;
 
 }
 .pbox3{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  margin: 10px;
+  padding: 10px;
+
 }
 
