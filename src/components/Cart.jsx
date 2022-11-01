@@ -1,14 +1,13 @@
 import './Cart.css';
-
 import { useContext, useState } from 'react';
 import { useParams } from 'react-router-dom'
 import cartContext from '../context/Cart-context';
 export default function Cart(props) {
-    const cart = useContext(cartContext);
+    const cartctx = useContext(cartContext);
     return (
         <div className="CartContainer">
-            {(cart.items.length > 0) ?
-                cart.items.map((item) => {
+            {(cartctx.items.length > 0) ?
+                cartctx.items.map((item) => {
                     return <p>{item.title}</p>;
                 })
                 :

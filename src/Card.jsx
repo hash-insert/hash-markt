@@ -1,12 +1,25 @@
 import './Card.css'
 import { Link } from 'react-router-dom'
+import './components/Button.jsx';
+import { useContext, useState } from "react";
 import { HeartIcon, ShoppingCartIcon,StarIcon } from "@heroicons/react/24/outline";
-// import CartContext from './context/Cart-context';
+import cartContext from './context/Cart-context';
+import ProductCount from './context/ProductCount';
 export default function Card(props) {
-   const  handleBtn=(e) => {
-    console.log(e.target);
-    props.addTocart(props.prod);
-  }
+  const countCtx = useContext(ProductCount);
+  const cartCtx = useContext(cartContext);
+  const [toggle, setToggle] = useState(false);
+  const handleCart = (e) => {
+    {
+      countCtx.incrementCount();
+      toggle ? cartCtx.addTocart(props.prod)  :cartCtx.removeFromCart(props.prod)
+      toggle
+        ? (e.target.style.backgroundColor = "yellow")
+        : (e.target.style.backgroundColor = "red");
+      setToggle((toggle) => !toggle);
+    
+    }
+  };
   return (
     <div className="container" >
        <HeartIcon className='heart' />
@@ -32,7 +45,8 @@ export default function Card(props) {
       <span>${props.cost}</span>
 {/* <link to={`/Cart/${props.id}`}>< ShoppingCartIcon className='cart'/> </link> */}
 
-<button  className='addtocart'  onClick={handleBtn}>add to cart <ShoppingCartIcon className='cart' /></button>
+<button  className='addtocart'  onClick={handleCart}>add to cart <ShoppingCartIcon className='cart' /></button>
+
     </div>
   )
 }
