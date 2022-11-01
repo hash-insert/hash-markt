@@ -6,7 +6,8 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 export default function Cart(props) {
-  const cart = useContext(CartContext);
+  const cartCtx = useContext(CartContext);
+  console.log(cartCtx)
 
   const cartstyle = {
     display: "flex",
@@ -17,10 +18,11 @@ export default function Cart(props) {
 
   return (
     <div>
+
       <Header />
       <hr />
-      {cart.items.length > 0 ? (
-        cart.items.map((item) => {
+      {cartCtx.items.length > 0 ? (
+        cartCtx.items.map((item) => {
           console.log(item);
           return (
             <div className="cart-boxstyle">

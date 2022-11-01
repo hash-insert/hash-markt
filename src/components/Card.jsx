@@ -12,15 +12,19 @@ export default function Card(props) {
   const countCtx = useContext(ProductContext);
   const fav = useContext(FavContext);
   const cartCtx = useContext(CartContext)
-  const [toggle, setToogle] = useState(false)
+  const [toggle, setToggle] = useState(false)
+  
 
   const handleCart = (e) => {
     {
       countCtx.incrementCount();
-      toggle ? CartContext.addTocart() : CartContext.removeFromCart();
+      toggle ? cartCtx.addTocart(props.prod):cartCtx.removeFromCart(props.prod)
+    
+        // cartCtx.removeFromCart();
 
 
-      toggle ? e.target.style.backgroundColor = "yellow" : e.target.style.backgroundColor = "red"
+      // toggle? e.target.style.backgroundColor = "yellow" :setToggle(e.target.style.backgroundColor = "red" === true)
+        // e.target.style.backgroundColor = "red"
       console.log(e.target);
       // props.addTocart(props.prod);
     }
@@ -59,7 +63,7 @@ export default function Card(props) {
         className="btn"
         //  img= <ShoppingCartIcon  style={{width:"10px",height:"10px"}} />
 
-        handleBtn={(e) => handleCart(e)}
+        handleBtn={(e) => handleCart(e,setToggle(true))}
       />
     </div>
   );

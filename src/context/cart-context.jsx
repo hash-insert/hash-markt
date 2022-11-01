@@ -11,13 +11,15 @@ const CartProvider = (props) => {
         setItems((items) => [prod, ...items])
     }
 
-    const removeFromCart = () => {
+    const removeFromCart = (prod) => {
         // remove from the cart items list
+        setItems((items)=> [items.pop(prod),...items])
+        
         console.log("remove from cart")
     }
 
     return (
-        <CartContext.Provider value={{ items, setItems, addTocart }}>
+        <CartContext.Provider value={{ items, setItems, addTocart,removeFromCart }}>
             {props.children}
         </CartContext.Provider>
     )
