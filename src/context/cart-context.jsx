@@ -7,13 +7,12 @@ const CartProvider = (props) => {
     const [items, setItems] = useState([])
     console.log('item is added', items)
 
-    const addTocart = (prod) => {
+    const addToCart = (prod) => {
         setItems((items) => [prod, ...items])
     }
 
     const removeFromCart = (prod) => {
-        // remove from the cart items list
-        // setItems((items) => [items.splice(0, prod)])
+      
         const filteredItems = items.filter((item) => item.id !== prod.id)
         setItems(filteredItems)
 
@@ -21,7 +20,7 @@ const CartProvider = (props) => {
     }
 
     return (
-        <CartContext.Provider value={{ items, setItems, addTocart, removeFromCart }}>
+        <CartContext.Provider value={{ items, setItems, addToCart, removeFromCart }}>
             {props.children}
         </CartContext.Provider>
     )

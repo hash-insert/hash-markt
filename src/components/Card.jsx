@@ -17,12 +17,13 @@ export default function Card(props) {
   const handleCart = (e) => {
     {
       countCtx.incrementCount();
-      toggle ? cartCtx.removeFromCart(props.prod) : cartCtx.addToCart(props.prod)
+      toggle
+        ? cartCtx.removeFromCart(props.prod)
+        : cartCtx.addToCart(props.prod);
       toggle
         ? (e.target.style.backgroundColor = "yellow")
         : (e.target.style.backgroundColor = "red");
       setToggle((toggle) => !toggle);
-
     }
   };
 
@@ -31,16 +32,14 @@ export default function Card(props) {
       <div className="heart">
         <HeartIcon
           className="heartIcon"
-
           onClick={(e) => {
             fav.addToFav(props.prod);
             toggle
               ? (e.target.style.fill = "grey")
               : (e.target.style.fill = "red");
             setToggle((toggle) => !toggle);
-            console.log(toggle)
+            
           }}
-
         />
       </div>
 
@@ -62,10 +61,9 @@ export default function Card(props) {
       <Button
         name="Add To Cart"
         className="btn"
-        cartBtn={true}
-        //  img= <ShoppingCartIcon  style={{width:"10px",height:"10px"}} />
+        
 
-        handleBtn={(e) => handleCart(e)}
+        handleBtn={(e) => { handleCart(e)}}
       />
     </div>
   );

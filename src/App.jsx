@@ -13,23 +13,22 @@ import ProductContext from './context/product-context'
 
 const App = () => {
   const [count, setCount] = useState(0);
-  const [productsApp, setProductsApp] = useState([]);
+  
 
-  console.log("App products", productsApp);
-
-  // useEffect(() => {
-  //   setCount(productsApp.length)
-  // }, [productsApp])
+  
 
   const incrementCount = () => {
     setCount((prev) => prev + 1);
   }
+  const decrementCount=() => {
+    setCount((prev)=> prev -1)
+  }
 
   return (
     <div className="App">
-      <ProductContext.Provider value={{count,incrementCount}}>
+      <ProductContext.Provider value={{count,incrementCount,decrementCount}}>
         <BrowserRouter>
-          <Route path="/" exact><Home increment={incrementCount} handleProducts={setProductsApp} /></Route>
+          <Route path="/" exact><Home increment={incrementCount} /></Route>
           <Route path='/login'><Login /></Route>
           <Route path='/signUp'><SignUp /></Route>
           <Route path='/cart'><Cart /></Route>

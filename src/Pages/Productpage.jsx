@@ -4,19 +4,24 @@ import { useParams } from "react-router-dom";
 import { StarIcon } from "@heroicons/react/24/outline";
 import Button from "../components/Button";
 import { HeartIcon, ShoppingCartIcon } from "@heroicons/react/24/outline";
+import { useContext } from "react";
+import FavContext from "../context/favorite-context";
 
 export default function Product(props) {
   const [toggle, setToggle] = useState(false);
   const [singleProd, setSingleProd] = useState([]);
+  const fav = useContext(FavContext);
+
+
   const fetchUniqueProd = () => {
     // fetching data from url
     let url = `https://fakestoreapi.com/products/${unique.id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+       
         setSingleProd(data);
-        // props.handleProducts(data);
+        
       })
       .catch((err) => {
         console.log(err);
@@ -29,12 +34,13 @@ export default function Product(props) {
 
   let unique = useParams();
 
-  function handleBtn(e) {
-    toggle ? e.target.style.backgroundColor = "yellow" : e.target.style.backgroundColor = "red"
-    setToggle(toggle => !toggle)
+  const handleBtn=(e) => {
+    toggle
+      ? (e.target.style.backgroundColor = "yellow")
+      : (e.target.style.backgroundColor = "red");
+    setToggle((toggle) => !toggle);
 
-    console.log(toggle)
-
+    console.log(toggle);
   }
 
   return (
@@ -60,13 +66,14 @@ export default function Product(props) {
             <Button
               name="Add To Cart"
               className="btn"
-              onClick={(e) => handleBtn(e)}
-            //  img= <ShoppingCartIcon  style={{width:"10px",height:"10px"}} />
+              onClick={(e) => {
+                console.log(e)
+                // handleBtn(e);
+              }}
             />
             <div className="heart">
               <HeartIcon
                 className="heartIcon"
-
                 onClick={(e) => {
                   fav.addToFav(props.prod);
                   e.target.style.fill = "red";
