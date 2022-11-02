@@ -29,11 +29,11 @@ export default function Product(props) {
 
   let unique = useParams();
 
-   function handleBtn(e){
-toggle ? e.target.style.backgroundColor="yellow" :e.target.style.backgroundColor="red"
-setToggle(toggle => !toggle)
+  function handleBtn(e) {
+    toggle ? e.target.style.backgroundColor = "yellow" : e.target.style.backgroundColor = "red"
+    setToggle(toggle => !toggle)
 
-console.log(toggle)
+    console.log(toggle)
 
   }
 
@@ -41,7 +41,7 @@ console.log(toggle)
     <div>
       <Header />
       <hr />
-      
+
       <div className="pbox">
         <img src={singleProd.image} style={{ width: "300px" }} alt="" />
         <div className="pbox2">
@@ -60,8 +60,8 @@ console.log(toggle)
             <Button
               name="Add To Cart"
               className="btn"
-              onClick={handleBtn(e)}
-              //  img= <ShoppingCartIcon  style={{width:"10px",height:"10px"}} />
+              onClick={(e) => handleBtn(e)}
+            //  img= <ShoppingCartIcon  style={{width:"10px",height:"10px"}} />
             />
             <div className="heart">
               <HeartIcon
