@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export default function Cart(props) {
   const cartCtx = useContext(CartContext);
-  console.log(cartCtx)
+  console.log(cartCtx);
 
   const cartstyle = {
     display: "flex",
@@ -18,7 +18,6 @@ export default function Cart(props) {
 
   return (
     <div>
-
       <Header />
       <hr />
       {cartCtx.items.length > 0 ? (
@@ -26,7 +25,10 @@ export default function Cart(props) {
           console.log(item);
           return (
             <div className="cart-boxstyle">
-              <img src={item.image} style={{ width: "150px", height: "150px", padding: "10px" }}></img>
+              <img
+                src={item.image}
+                style={{ width: "150px", height: "150px", padding: "10px" }}
+              ></img>
               <div className="cart-style">
                 <p>{item.title}</p>
                 <p>${item.price}</p>

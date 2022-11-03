@@ -28,7 +28,7 @@ const App = () => {
     <div className="App">
       <ProductContext.Provider value={{count,incrementCount,decrementCount}}>
         <BrowserRouter>
-          <Route path="/" exact><Home increment={incrementCount} /></Route>
+          <Route path="/" exact><Home increment={incrementCount} decrement={decrementCount}/></Route>
           <Route path='/login'><Login /></Route>
           <Route path='/signUp'><SignUp /></Route>
           <Route path='/cart'><Cart /></Route>

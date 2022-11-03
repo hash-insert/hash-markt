@@ -16,7 +16,9 @@ export default function Card(props) {
 
   const handleCart = (e) => {
     {
-      countCtx.incrementCount();
+      toggle
+      ? countCtx.decrementCount()
+      : countCtx.incrementCount();
       toggle
         ? cartCtx.removeFromCart(props.prod)
         : cartCtx.addToCart(props.prod);

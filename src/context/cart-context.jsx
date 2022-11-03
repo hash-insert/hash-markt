@@ -8,7 +8,9 @@ const CartProvider = (props) => {
     console.log('item is added', items)
 
     const addToCart = (prod) => {
-        setItems((items) => [prod, ...items])
+
+       const checkitem= items.find((item)=>item.id !== prod.id)
+        setItems((checkitem) => [prod, ...checkitem])
     }
 
     const removeFromCart = (prod) => {
