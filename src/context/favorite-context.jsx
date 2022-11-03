@@ -10,6 +10,10 @@ const FavProvider=(props)=>{
     const addToFav=(prod)=>{
 setItems((items)=>[prod,...items] )
     }
+
+    
+
+
     return (
         <FavContext.Provider value ={{items,setItems,addToFav}}>
             {props.children}

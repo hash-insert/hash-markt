@@ -14,6 +14,7 @@ export default function Fav(props) {
       <hr />
       {fav.items.length > 0 ? (
         fav.items.map((prod) => {
+          console.log(fav.items)
           return (
             <div className="favCards">
               <Card

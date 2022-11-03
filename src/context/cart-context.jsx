@@ -13,8 +13,8 @@ const CartProvider = (props) => {
 
     const removeFromCart = (prod) => {
       
-        const filteredItems = items.filter((item) => item.id !== prod.id)
-        setItems(filteredItems)
+        // const filteredItems = items.filter((items) => items.id !== prod.id)
+        // setItems(filteredItems)
 
         console.log("remove from cart")
     }

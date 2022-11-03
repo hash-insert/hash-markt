@@ -6,12 +6,13 @@ import Button from "../components/Button";
 import { HeartIcon, ShoppingCartIcon } from "@heroicons/react/24/outline";
 import { useContext } from "react";
 import FavContext from "../context/favorite-context";
+import CartContext from "../context/cart-context";
 
 export default function Product(props) {
   const [toggle, setToggle] = useState(false);
   const [singleProd, setSingleProd] = useState([]);
   const fav = useContext(FavContext);
-
+  const cartCtx = useContext(CartContext);
 
   const fetchUniqueProd = () => {
     // fetching data from url
@@ -19,9 +20,7 @@ export default function Product(props) {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-       
         setSingleProd(data);
-        
       })
       .catch((err) => {
         console.log(err);
@@ -34,14 +33,18 @@ export default function Product(props) {
 
   let unique = useParams();
 
-  const handleBtn=(e) => {
-    toggle
-      ? (e.target.style.backgroundColor = "yellow")
-      : (e.target.style.backgroundColor = "red");
-    setToggle((toggle) => !toggle);
-
-    console.log(toggle);
-  }
+  const handleCartBtn = (e) => {
+    {
+      // countCtx.incrementCount();
+      toggle
+        ? cartCtx.removeFromCart(props.prod)
+        : cartCtx.addToCart(props.prod);
+      toggle
+        ? (e.target.style.backgroundColor = "yellow")
+        : (e.target.style.backgroundColor = "red");
+      setToggle((toggle) => !toggle);
+    }
+  };
 
   return (
     <div>
@@ -66,9 +69,8 @@ export default function Product(props) {
             <Button
               name="Add To Cart"
               className="btn"
-              onClick={(e) => {
-                console.log(e)
-                // handleBtn(e);
+              handleBtn={(e) => {
+                handleCartBtn(e);
               }}
             />
             <div className="heart">
@@ -76,7 +78,10 @@ export default function Product(props) {
                 className="heartIcon"
                 onClick={(e) => {
                   fav.addToFav(props.prod);
-                  e.target.style.fill = "red";
+                  toggle
+                    ? (e.target.style.fill = "grey")
+                    : (e.target.style.fill = "red");
+                  setToggle((toggle) => !toggle);
                 }}
               />
             </div>
