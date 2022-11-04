@@ -9,12 +9,15 @@ const CartProvider = (props) => {
 
     const addToCart = (prod) => {
 
-       const checkitem= items.find((item)=>item.id !== prod.id)
-        setItems((checkitem) => [prod, ...checkitem])
+        const checkitem = items.find((item) => item.id === prod.id)
+
+        if (checkitem === undefined) {
+            setItems((items) => [prod, ...items])
+        }
     }
 
     const removeFromCart = (prod) => {
-      
+
         const filteredItems = items.filter((items) => items.id !== prod.id)
         setItems(filteredItems)
 

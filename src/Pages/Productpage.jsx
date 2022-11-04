@@ -8,11 +8,14 @@ import { useContext } from "react";
 import FavContext from "../context/favorite-context";
 import CartContext from "../context/cart-context";
 
-export default function Product(props) {
+export default function Product() {
   const [toggle, setToggle] = useState(false);
   const [singleProd, setSingleProd] = useState([]);
   const fav = useContext(FavContext);
   const cartCtx = useContext(CartContext);
+
+  // Getting the product parameters like id from the url/link
+  let unique = useParams();
 
   const fetchUniqueProd = () => {
     // fetching data from url
@@ -31,14 +34,12 @@ export default function Product(props) {
     fetchUniqueProd();
   }, []);
 
-  let unique = useParams();
-
   const handleCartBtn = (e) => {
     {
       // countCtx.incrementCount();
       toggle
-        ? cartCtx.removeFromCart(props.prod)
-        : cartCtx.addToCart(props.prod);
+        ? cartCtx.removeFromCart(singleProd)
+        : cartCtx.addToCart(singleProd);
       toggle
         ? (e.target.style.backgroundColor = "yellow")
         : (e.target.style.backgroundColor = "red");
@@ -77,7 +78,7 @@ export default function Product(props) {
               <HeartIcon
                 className="heartIcon"
                 onClick={(e) => {
-                  fav.addToFav(props.prod);
+                  fav.addToFav(singleProd);
                   toggle
                     ? (e.target.style.fill = "grey")
                     : (e.target.style.fill = "red");
