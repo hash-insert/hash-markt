@@ -47,8 +47,11 @@ export default function Card(props) {
       <Link to={`/productdetails/${props.id}`}>
       {/* <Link to={`/Productdetails/${props.id}`}><img src={props.image} /></Link> */}
       <img className="img-box" src={props.image} />  </Link>
-
+    
         <h4 style={{ color: "white" }}>{props.name}</h4>
+
+
+        {/* <h4 style={{ color: "white" }}>{props.name}</h4> */}
   
 
       <div className="rating">

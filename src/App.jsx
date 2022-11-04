@@ -25,7 +25,7 @@ function App() {
         <Route path="/" exact><Home  increment={incrementCount}/></Route>
         <Route path='/login'><Login /></Route>
         <Route path='/signUp'><SignUp /></Route>
-        <Route path='/cart'><Cart /></Route>
+        <Route path='/Cart'><Cart /></Route>
         <Route path='/favourites'><Favourites /></Route>
         <Route path='/productdetails/:id'><Productdetails /></Route>
       </BrowserRouter>

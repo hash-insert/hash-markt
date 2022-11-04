@@ -1,4 +1,4 @@
-button{
+/* button{
     width: 200px;
     height: 50px;
     border: none;
@@ -14,4 +14,3 @@ button:hover{
 }
 .filterbtn{
     /* padding-right: 10px; */
-}
