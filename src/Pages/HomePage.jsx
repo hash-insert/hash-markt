@@ -13,8 +13,6 @@ export default function Home(props) {
 
   const { items, setItems, addTocart } = useContext(CartContext);
 
-  const checkitem = items.find((item) => item.id === prod.id)
-
   const fetchData = () => {
     // fetching data from url
     let url = "https://fakestoreapi.com/products";
@@ -61,6 +59,8 @@ export default function Home(props) {
 
       <div className="card-container">
         {filterCard.map((prod) => {
+          const checkitem = items.find((item) => item.id === prod.id)
+
           return (
             <Card
               key={prod.id}
