@@ -29,6 +29,7 @@ body {
   display: flex;
   justify-content: flex-start;
 }
+
 /* .rating:hover{
     background-color: yellow;
 } */
@@ -47,13 +48,19 @@ body {
   font-size: 15px;
 }
 
+.btn-remove {
+  background-color: red;
+}
+
 .card {
   display: inline;
 }
+
 .img-box {
   width: 200px;
   height: 220px;
 }
+
 /* .img-box:hover{
 
   } */
@@ -92,16 +99,18 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .all {
   margin: 10px;
   width: 150px;
   height: 35px;
 }
+
 .all:hover {
   box-shadow: 3px 0px 3px yellow;
 }
 
-.heartIcon{
+.heartIcon {
   width: 25px;
   height: 25px;
   color: grey;
@@ -118,41 +127,42 @@ body {
   display: flex;
 
   flex-wrap: wrap;
- 
+
 }
 
-.cart-boxstyle{
-  display:flex ;
+.cart-boxstyle {
+  display: flex;
   border-radius: 10px;
   margin: 20px;
   box-shadow: 0 0 0 3px yellow
 }
 
-.cart-style{
+.cart-style {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   background-color: #263859;
 }
 
-.pbox{
-display: flex;
-margin: 10px;
-padding: 10px;
+.pbox {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
 }
-.pbox2{
+
+.pbox2 {
   display: flex;
   flex-direction: column;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   margin: 20px;
   padding: 20px;
 
 }
-.pbox3{
+
+.pbox3 {
   display: flex;
   justify-content: space-around;
   margin: 10px;
   padding: 10px;
 
 }
-

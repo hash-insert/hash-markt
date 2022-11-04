@@ -17,8 +17,8 @@ export default function Card(props) {
   const handleCart = (e) => {
     {
       toggle
-      ? countCtx.decrementCount()
-      : countCtx.incrementCount();
+        ? countCtx.decrementCount()
+        : countCtx.incrementCount();
       toggle
         ? cartCtx.removeFromCart(props.prod)
         : cartCtx.addToCart(props.prod);
@@ -40,7 +40,7 @@ export default function Card(props) {
               ? (e.target.style.fill = "grey")
               : (e.target.style.fill = "red");
             setToggle((toggle) => !toggle);
-            
+
           }}
         />
       </div>
@@ -61,11 +61,12 @@ export default function Card(props) {
       <p>{props.desc}</p>
       <span>{props.cost}$</span>
       <Button
-        name="Add To Cart"
-        className="btn"
-        
-
-        handleBtn={(e) => { handleCart(e)}}
+        name={props.checkItem ? "Remove from Cart" : "Add To Cart"}
+        className={`btn ${props.checkItem ? "btn-remove" : ""} `}
+        handleBtn={(e) => { handleCart(e) }}
+      // {props.checkItem
+      // ? (e.target.style.backgroundColor = "yellow")
+      // : (e.target.style.backgroundColor = "red")}
       />
     </div>
   );

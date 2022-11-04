@@ -13,13 +13,15 @@ export default function Home(props) {
 
   const { items, setItems, addTocart } = useContext(CartContext);
 
+  const checkitem = items.find((item) => item.id === prod.id)
+
   const fetchData = () => {
     // fetching data from url
     let url = "https://fakestoreapi.com/products";
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        
+
         setProducts(data);
 
       });
@@ -70,6 +72,7 @@ export default function Home(props) {
               desc={prod.descrption}
               cost={prod.price}
               addTocart={addTocart}
+              checkItem={checkitem}
             />
           );
         })}
