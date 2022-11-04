@@ -25,9 +25,9 @@ function App() {
         <Route path="/" exact><Home  increment={incrementCount}/></Route>
         <Route path='/login'><Login /></Route>
         <Route path='/signUp'><SignUp /></Route>
-        <Route path='/Cart /:prod'><Cart /></Route>
-        <Route path='/Favourites'><Favourites /></Route>
-        <Route path='/Productdetails/:prod'><Productdetails /></Route>
+        <Route path='/cart'><Cart /></Route>
+        <Route path='/favourites'><Favourites /></Route>
+        <Route path='/productdetails/:id'><Productdetails /></Route>
       </BrowserRouter>
       </ProductCount.Provider>
     </div>

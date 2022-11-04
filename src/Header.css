@@ -1,4 +1,4 @@
-.header{
+/* .header{
     display: flex;
     justify-content: space-between;
     height: 100px;
@@ -42,4 +42,20 @@ height: 50px;
  .links:hover{
     color: yellow;
     background-color:rgb(69, 69, 94) ;
+ } */
+ .header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 90px;
+   
+   background-color: #263859;
+ }
+ h1,h3{
+   color: gold;
+ }
+ 
+ h1{
+   padding: 10px;
+   font-weight: 800;
  }

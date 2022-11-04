@@ -5,7 +5,7 @@ import './Home.css'
 import { useContext, useEffect, useState } from "react";
 import ProductContext from '../context/product-context';
 import cartContext from '../context/Cart-context';
-export default function Home() {
+export default function Home(props) {
 
   // const [products, setProducts] = useState([]);
   const {productList} = useContext(ProductContext);
@@ -42,7 +42,7 @@ export default function Home() {
   let updatedList = [];
 
   if (category !== "") {
-    updatedList = productList.filter((catitems) => catitems.category === category);
+    updatedList = productList.filter((items) => items.category === category);
   }
   else {
     updatedList =  productList;
@@ -61,7 +61,7 @@ export default function Home() {
         {
           updatedList.map((prod) => {
             return (
-              <Card id={prod.id} image={prod.image} num={prod.rating.count} name={prod.title} desc={prod.descrption} cost={prod.price}  addTocart={addTocart}/>
+              <Card  key = { prod.id}id={prod.id} image={prod.image} num={prod.rating.count} name={prod.title} desc={prod.descrption} cost={prod.price}  addTocart={addTocart}/>
             );
           })}
       </div>
