@@ -7,6 +7,7 @@ import CartContext from './context/Cart-context';
 import ProductCount from './context/ProductCount';
 import FavContext from './context/Favourite-context';
 import Button from './components/Button.jsx';
+import Starrating from './components/Starrating.jsx';
 
 export default function Card(props) {
   const countCtx = useContext(ProductCount);
@@ -55,11 +56,12 @@ export default function Card(props) {
   
 
       <div className="rating">
+        {/* <StarIcon />
         <StarIcon />
         <StarIcon />
         <StarIcon />
-        <StarIcon />
-        <StarIcon />({props.num})
+        <StarIcon /> */}
+        <Starrating />  ({props.num})
       </div>
       <p>{props.desc}</p>
       <span>{props.cost}$</span>

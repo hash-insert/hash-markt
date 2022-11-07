@@ -11,8 +11,10 @@
   "dependencies": {
     "@headlessui/react": "^1.7.3",
     "@heroicons/react": "^2.0.12",
+    "icons": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.6.0",
     "react-router-dom": "^5.3.3"
   },
   "devDependencies": {
