@@ -8,7 +8,11 @@ const FavProvider=(props)=>{
     console.log('item is added',items)
 
     const addToFav=(prod)=>{
-setItems((items)=>[prod,...items] )
+        const checkitem = items.find((item) => item.id === prod.id)
+
+        if (checkitem === undefined) {
+            setItems((items) => [prod, ...items])
+        }
     }
 
     

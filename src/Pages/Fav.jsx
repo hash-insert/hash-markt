@@ -15,8 +15,9 @@ export default function Fav(props) {
       {fav.items.length > 0 ? (
         fav.items.map((prod) => {
           console.log(fav.items)
+          const checkitem = fav.items.find((item) => item.id === prod.id)
           return (
-            <div className="favCards">
+           
               <Card
                 key={prod.id}
                 id={prod.id}
@@ -26,8 +27,9 @@ export default function Fav(props) {
                 name={prod.title}
                 desc={prod.descrption}
                 cost={prod.price}
+                checkitem={checkitem}
               />
-            </div>
+           
           );
         })
       ) : (

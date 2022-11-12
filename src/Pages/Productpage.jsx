@@ -8,7 +8,7 @@ import { useContext } from "react";
 import FavContext from "../context/favorite-context";
 import CartContext from "../context/cart-context";
 
-export default function Product() {
+export default function Product(props) {
   const [toggle, setToggle] = useState(false);
   const [singleProd, setSingleProd] = useState([]);
   const fav = useContext(FavContext);
@@ -68,8 +68,8 @@ export default function Product() {
           <div className="pbox3">
             <span>${singleProd.price}</span>
             <Button
-              name="Add To Cart"
-              className="btn"
+              name={props.checkItem ? "Remove from Cart" : "Add To Cart"}
+              className={`btn ${props.checkItem ? "btn-remove" : ""} `}
               handleBtn={(e) => {
                 handleCartBtn(e);
               }}

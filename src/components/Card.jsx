@@ -14,6 +14,12 @@ export default function Card(props) {
   const cartCtx = useContext(CartContext);
   const [toggle, setToggle] = useState(false);
 
+
+  const handleStar =(e)=> {
+    console.log('clicked')
+    e.target.style.fill="yellow"
+  }
+
   const handleCart = (e) => {
     {
       toggle
@@ -33,13 +39,13 @@ export default function Card(props) {
     <div className="container">
       <div className="heart">
         <HeartIcon
-          className="heartIcon"
-          onClick={(e) => {
+          className={props.checkItem ? "heartIcon-remove" : "heartIcon"} 
+          onClick={() => {
             fav.addToFav(props.prod);
-            toggle
-              ? (e.target.style.fill = "grey")
-              : (e.target.style.fill = "red");
-            setToggle((toggle) => !toggle);
+            // toggle
+            //   ? (e.target.style.fill = "grey") 
+            //   : (e.target.style.fill = "red");
+            // setToggle((toggle) => !toggle);
 
           }}
         />
@@ -52,11 +58,11 @@ export default function Card(props) {
       </Link>
 
       <div className="rating">
-        <StarIcon />
-        <StarIcon />
-        <StarIcon />
-        <StarIcon />
-        <StarIcon />({props.num})
+        <StarIcon style={{height: "10px"}} onClick={handleStar} />
+        <StarIcon onClick={handleStar}/>
+        <StarIcon onClick={handleStar}/>
+        <StarIcon onClick={handleStar} />
+        <StarIcon onClick={handleStar}/>({props.num})
       </div>
       <p>{props.desc}</p>
       <span>{props.cost}$</span>
@@ -64,9 +70,7 @@ export default function Card(props) {
         name={props.checkItem ? "Remove from Cart" : "Add To Cart"}
         className={`btn ${props.checkItem ? "btn-remove" : ""} `}
         handleBtn={(e) => { handleCart(e) }}
-      // {props.checkItem
-      // ? (e.target.style.backgroundColor = "yellow")
-      // : (e.target.style.backgroundColor = "red")}
+    
       />
     </div>
   );
