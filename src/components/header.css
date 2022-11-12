@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  
+  background-color: #263859;
+}
+h1,h3{
+  color: gold;
+}
+
+h1{
+  padding: 10px;
+  font-weight: 800;
+}

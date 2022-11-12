@@ -1,0 +1,20 @@
+.signup-style{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 500px;
+    margin: 50px;
+    margin-left: 500px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 1px yellow;
+    padding: 2px;
+    border-radius: 10px;
+}
+.signup-btn{
+    width: 310px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: yellow;
+    color: black;
+}
