@@ -27,7 +27,7 @@ function App() {
         <Route path='/signUp'><SignUp /></Route>
         <Route path='/Cart'><Cart /></Route>
         <Route path='/favourites'><Favourites /></Route>
-        <Route path='/productdetails/:id'><Productdetails /></Route>
+        <Route path='/productdetails/:prod'><Productdetails /></Route>
       </BrowserRouter>
       </ProductCount.Provider>
     </div>
