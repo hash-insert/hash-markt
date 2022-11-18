@@ -23,6 +23,7 @@ export default function Productdetails(props) {
                 <img src={productDetail.image} className='pimg'></img>
                 <div className='productdetails'>
                     <h2>({productDetail.title})</h2>
+                    <h3>{productDetail.rating && productDetail.rating.rate}</h3>
                     <p>{productDetail.description}</p>
                     <span>$.{productDetail.price}</span>
                     <button className='addtocart'>add to cart < ShoppingCartIcon className='cart' /></button>

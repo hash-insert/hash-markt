@@ -7,7 +7,7 @@ import CartContext from './context/Cart-context';
 import ProductCount from './context/ProductCount';
 import FavContext from './context/Favourite-context';
 import Button from './components/Button.jsx';
-import Starrating from './components/Starrating.jsx';
+// import Starrating from './components/Starrating.jsx';
 
 export default function Card(props) {
   const countCtx = useContext(ProductCount);
@@ -56,18 +56,16 @@ export default function Card(props) {
   
 
       <div className="rating">
-        {/* <StarIcon />
-        <StarIcon />
-        <StarIcon />
-        <StarIcon />
-        <StarIcon /> */}
-        <Starrating />  ({props.num})
+
+        <p> Rating:  <StarIcon  className=' starrate'/> {props.rating && props.rating.rate} ({props.num}) </p>
+       <h3></h3>    
+ 
       </div>
       <p>{props.desc}</p>
       <span>{props.cost}$</span>
       <Button
-        name="Add To Cart"
-        className="btn"
+        name={props.checkItem ? "Remove from cart" : "Add to cart"}
+        className={'btn ${props.checkItem ? "btn-remove" : ""} '}
         handleBtn={(e) => { handleCart(e)}}
       />
     </div>

@@ -64,7 +64,7 @@ export default function Home(props) {
           updatedList.map((prod) => {
             const checkitem = items.find((item) => item.id === prod.id)
             return (
-              <Card  key = { prod.id}id={prod.id}  prod={prod} image={prod.image} num={prod.rating.count} name={prod.title} desc={prod.descrption} cost={prod.price}  addTocart={addTocart} checkItem={checkitem}/>
+              <Card  key = { prod.id}id={prod.id}  prod={prod} image={prod.image} num={prod.rating.count} name={prod.title} desc={prod.descrption} cost={prod.price} rating={prod.rating} addTocart={addTocart} checkItem={checkitem}/>
               
             );
           })}

@@ -8,7 +8,7 @@ body {
   .container {
     width: 280px;
     margin: 25px;
-    height: 450px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,8 +27,8 @@ body {
     width: 85px;
     height: 20px;
     display: flex;
-    justify-content: flex-start;
-  } */
+    justify-content: flex-start; 
+   } 
   /* .rating:hover{
       background-color: yellow;
   } */
@@ -106,7 +106,12 @@ body {
     color: grey;
     fill: grey
   }
-  
+  .starrate{
+    width: 30px;
+    height: 30px;
+    color: yellow;
+    fill: yellow;
+  }
   .heartIcon :hover {
     fill: red;
   }
