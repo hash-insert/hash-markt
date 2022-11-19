@@ -1,0 +1,61 @@
+/* .header{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+
+}
+
+
+
+.menu {
+    padding-left: 800px;
+}
+ .menubtn{
+    border: 2px solid yellow;
+    display: flex;
+    width: 100px;
+    border-radius: 5px;
+
+ }
+ .menuitems{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 5px;
+
+    
+ }
+
+ .cartsvg{
+width: 50px;
+height: 50px;
+ }
+ .links{
+    background-color: aliceblue;
+    width: 150px;
+    height: 50px;
+    color:  rgb(69, 69, 94);
+    text-decoration: none;
+    padding-left: 10px;
+    
+ }
+ .links:hover{
+    color: yellow;
+    background-color:rgb(69, 69, 94) ;
+ } */
+ .header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 90px;
+   
+   /* background-color: #263859; */
+ }
+ h1,h3{
+   color: gold;
+ }
+ 
+ h1{
+   padding: 10px;
+   font-weight: 800;
+ }

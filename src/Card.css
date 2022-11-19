@@ -1,0 +1,167 @@
+body {
+    /* background-color: #263859; */
+    color: gold;
+  }
+  
+  
+  
+  .container {
+    width: 280px;
+    margin: 25px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #263859; */
+    border-radius: 8px;
+    box-shadow: 0 0 0px 2px yellow;
+  }
+  
+  .heart {
+    align-self: flex-end;
+    margin-right: 5px;
+  }
+  
+  /* .rating {
+    width: 85px;
+    height: 20px;
+    display: flex;
+    justify-content: flex-start; 
+   } 
+  /* .rating:hover{
+      background-color: yellow;
+  } */
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(247, 247, 25);
+    color: black;
+    font-size: 15px;
+  }
+  
+  .card {
+    display: inline;
+  }
+  .img-box {
+    width: 200px;
+    height: 220px;
+  }
+  /* .img-box:hover{
+    } */
+  
+  .fav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 3px yellow;
+    border-radius: 5px;
+    /* width: auto;
+    height: auto; */
+    margin: 50px;
+    background-color: white;
+  }
+  
+  
+  .cartbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 3px yellow;
+    border-radius: 5px;
+    width: auto;
+    height: auto;
+    margin: 50px;
+    background-color: white;
+  }
+  
+  .tabs {
+    display: flex;
+    margin: 10px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .all {
+    margin: 10px;
+    width: 150px;
+    height: 35px;
+  }
+  .all:hover {
+    box-shadow: 3px 0px 3px yellow;
+  }
+  
+  .heartIcon{
+    width: 25px;
+    height: 25px;
+    color: grey;
+    fill: grey
+  }
+  .starrate{
+    width: 30px;
+    height: 30px;
+    color: yellow;
+    fill: yellow;
+  }
+  .heartIcon :hover {
+    fill: red;
+  }
+  
+  .favCards {
+    width: auto;
+    height: auto;
+    display: flex;
+  
+    flex-wrap: wrap;
+   
+  }
+  
+  .cart-boxstyle{
+    display:flex ;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 0 0 3px yellow
+  }
+  
+  .cart-style{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #263859;
+  }
+  
+  .pbox{
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  }
+  .pbox2{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    margin: 20px;
+    padding: 20px;
+  
+  }
+  .pbox3{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 10px;
+  
+  }
+  .cardcon{
+   
+    display: flex;
+    flex-wrap: wrap;
+    margin: 45px;
+}

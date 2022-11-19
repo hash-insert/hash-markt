@@ -1,0 +1,26 @@
+.signup-style{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin: 100px;
+     padding: 5px;
+     background-color:  rgb(69, 69, 94);
+     border: 2px solid yellow;
+}
+.registerbtn{
+    background-color:yellow;
+    margin: 10px;
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid  rgb(56, 56, 90) ;
+    color:  rgb(56, 56, 90);
+}
+.registerbtn:hover{
+    background-color:rgb(69, 69, 94);
+    color: yellow;
+    border: 2px solid yellow;
+}

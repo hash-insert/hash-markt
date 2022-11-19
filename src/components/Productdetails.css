@@ -1,0 +1,28 @@
+.productspage{
+    display: flex;
+/* justify-items: center; */
+}
+.product{
+    display: flex;
+    flex-direction: row;
+}
+.pimg{
+    width: 200px;
+}
+.productdetails{
+    padding-left: 20px;
+    margin: 10px;
+}
+.productdetails p{
+    font-weight: 500;
+    font-size: x-large;
+}
+.productdetails span{
+    font-size: xx-large;
+}
+.productdetails button{
+    border: 2px solid yellow;
+    padding-left: 40px;
+    text-align: center;
+    margin-left: 50px;
+}
